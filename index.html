@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <h2 class=" text-center  text-red-800 font-bold">
+        FNB APP ACADEMY PROJECT - DASHBOARD WITH DATA USING LOCAL STORAGE
+    </h2>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen p-6">
+
+    <h1 class="text-3xl font-bold mb-6">Shop Dashboard</h1>
+    <h1 class=" mb-10 font-bold">DONT FORGET TO ADD PRODUCTS!</h1>
+    <a href="add.html"
+        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow transition-all duration-200 mt-10">
+        ➕ Add Product
+    </a>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8 mt-10">
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <p class="text-gray-400">Total Products</p>
+            <h2 id="totalProducts" class="text-2xl font-bold">0</h2>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <p class="text-gray-400">Total Stock</p>
+            <h2 id="totalStock" class="text-2xl font-bold">0</h2>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <p class="text-gray-400">Categories</p>
+            <h2 id="totalCategories" class="text-2xl font-bold">0</h2>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-gray-800 p-6 rounded-lg mb-8 overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="border-b border-gray-700">
+                    <th class="py-2">Product</th>
+                    <th class="py-2">Price</th>
+                    <th class="py-2">Stock</th>
+                    <th class="py-2">Category</th>
+                </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+        </table>
+    </div>
+
+    <h1>Simple Charts using Chart js (javascript library)</h1>
+
+    <!-- Chart -->
+    <div class="bg-gray-800 p-6 rounded-lg h-40 w-full flex justify-center items-center">
+        <canvas id="stockChart" class="max-w-full"></canvas>
+    </div>
+
+    <!-- Chart -->
+    <div class="text-center mt-10 bg-blue-600">
+        <h2>Project for FNB APP ACADEMY - Custom Dashboard Using Local Storage and Learning css with tailwind</h2>
+    </div>
+
+    <script src="/script.js" defer></script>
+</body>
+
+</html>
