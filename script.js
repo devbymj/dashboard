@@ -31,7 +31,7 @@ function renderDashboard(products) {
     tableBody.innerHTML = products.map(p => `
             <tr class="border-t border-gray-700">
                 <td class="py-2">${p.name}</td>
-                <td class="py-2">$${p.price}</td>
+                <td class="py-2">R${p.price}</td>
                 <td class="py-2">${p.stock}</td>
                 <td class="py-2">${p.category}</td>
             </tr>
@@ -62,4 +62,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     const products = await loadProducts();
     renderDashboard(products);
 });
+
 
