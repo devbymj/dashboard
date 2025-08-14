@@ -51,10 +51,10 @@ function renderDashboard(products) {
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true,
-            scales: { y: { beginAtZero: true } }
-        }
+     options: {
+        responsive: false,
+        maintainAspectRatio: false
+    }
     });
 }
 
@@ -62,3 +62,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     const products = await loadProducts();
     renderDashboard(products);
 });
+
